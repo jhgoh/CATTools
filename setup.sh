@@ -1,8 +1,8 @@
-scram project -n cattools CMSSW_9_1_14_patch2
+scram project -n cattools CMSSW_9_4_0
 cd cattools/src
 cmsenv
 git-cms-init -q
-git checkout -b cat90x
+git checkout -b cat94x
 
 #git-cms-addpkg RecoEgamma/ElectronIdentification
 #git-cms-addpkg EgammaAnalysis/ElectronTools
@@ -11,7 +11,7 @@ git checkout -b cat90x
 
 git clone https://github.com/vallot/CATTools
 cd CATTools
-git checkout -b cat90x cat90x
+git checkout -b cat94x cat94x
 git submodule init
 git submodule update
 cd ..
@@ -26,7 +26,7 @@ rm -f CATTools/CatAnalyzer/data/desyKinRecoInput.root
 
 scram b -j30
 
-catGetDatasetInfo v9-0-0
+catGetDatasetInfo v9-4-0
 
 ## Production only - do the unit test
 #cd CATTools/CatProducer
